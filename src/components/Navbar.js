@@ -25,7 +25,6 @@ function Navbar() {
         setMobileNavbar(false);
     };
 
-
     return ( <
         nav >
         <
@@ -33,42 +32,45 @@ function Navbar() {
         <
         div className = "desktop-nav" >
         <
-        ul > {
-            activeNav === "/" ?
-            " " :
-                <
+        ul > { " " } {
+            activeNav === "/" ? (
+                " "
+            ) : ( <
                 li className = "desktop" >
                 <
                 Link to = { "/" } > Home < /Link> <
                 /li>
-        } {
-            activeNav === "/About_us" ?
-                " " :
-                <
+            )
+        } { " " } {
+            activeNav === "/About_us" ? (
+                " "
+            ) : ( <
                 li className = "desktop" >
                 <
                 Link to = "/About_us" > About < /Link> <
                 /li>
-        } {
-            activeNav === "/Skills" ?
-                " " :
-                <
+            )
+        } { " " } {
+            activeNav === "/Skills" ? (
+                " "
+            ) : ( <
                 li className = "desktop" >
                 <
                 Link to = "/Skills" > Skills < /Link> <
                 /li>
-        } {
-            activeNav === "/Contact" ?
-                " " :
-                <
+            )
+        } { " " } {
+            activeNav === "/Contact" ? (
+                " "
+            ) : ( <
                 li className = "desktop" >
                 <
                 Link to = "/Contact" > Contact < /Link> <
                 /li>
-
-        } <
-        /ul> <
-        /div> <
+            )
+        } { " " } <
+        /ul>{" "} <
+        /div>{" "} <
         span className = "icon"
         style = {
             { display: mobileNavbar ? "none" : "block" } } >
@@ -76,76 +78,61 @@ function Navbar() {
         img src = { svgIcon }
         onClick = {
             () => hamburger(true) }
-        alt = "Hamburger Icon" /
-        >
+        alt = "Hamburger Icon" / >
         <
-        /span>
-
-        {
+        /span>{" "} {
             mobileNavbar ? ( <
                 div className = "mobile-nav" >
                 <
                 div className = "clsbtn"
                 onClick = { hideHamburger } >
-                X <
-                /div>
-
-                <
-                ul onClick = { navcom } >
-
-                {
-                    activeNav === "/" ?
-                    " " :
-                        <
+                X { " " } <
+                /div>{" "} <
+                ul onClick = { navcom } > { " " } {
+                    activeNav === "/" ? (
+                        " "
+                    ) : ( <
                         li >
                         <
-                        Link to = { "/" } > Home < /Link> <
+                        Link to = { "/" } > Home < /Link>{" "} <
                         /li>
-
-                }
-
-                {
-                    activeNav === "/About_us" ?
-                        " " :
-                        <
+                    )
+                } { " " } {
+                    activeNav === "/About_us" ? (
+                        " "
+                    ) : ( <
                         li >
                         <
-                        Link to = "/About_us" > About < /Link> <
+                        Link to = "/About_us" > About < /Link>{" "} <
                         /li>
-
-                } {
-                    activeNav === "/Skills" ?
-                        " " :
-                        <
+                    )
+                } { " " } {
+                    activeNav === "/Skills" ? (
+                        " "
+                    ) : ( <
                         li >
                         <
-                        Link to = { "/Skills" } > Skills < /Link> <
+                        Link to = { "/Skills" } > Skills < /Link>{" "} <
                         /li>
-
-                }
-
-                {
-                    activeNav === "/Contact" ?
-                        " " :
-                        <
+                    )
+                } { " " } {
+                    activeNav === "/Contact" ? (
+                        " "
+                    ) : ( <
                         li >
                         <
-                        Link to = { "/Contact" } > Contact < /Link> <
+                        Link to = { "/Contact" } > Contact < /Link>{" "} <
                         /li>
-
-                }
-
-
-                <
-                /ul> <
+                    )
+                } { " " } <
+                /ul>{" "} <
                 /div>
             ) : (
                 ""
             )
-        } <
-        /div> <
+        } { " " } <
+        /div>{" "} <
         /nav>
     );
 }
-
 export default Navbar;

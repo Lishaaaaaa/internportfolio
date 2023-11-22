@@ -1,74 +1,44 @@
-.about-section,
-.skills-section,
-.contact-section {
-    padding: 50px;
-    margin-left: 50px;
-    margin-top: 20px;
-    text-align: center;
-    border-radius: 20px;
-    font-size: 30px;
-    transition: all 0.3s ease;
-    position: relative;
-    height: 150px;
-    width: 350px;
-    /*Transition property for smooth effect */
-}
-
-.skills-section img,
-.about-section img,
-.contact-section img {
-    object-fit: cover;
-    width: 386px;
-    height: 200px;
-    border-radius: 20px;
+body {
+    background-color: rgb(71, 10, 71);
 }
 
 .main {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 160px;
-    background-color: rgb(63, 103, 117);
-}
-
-.about-section:hover,
-.skills-section:hover,
-.contact-section:hover {
-    color: blue;
-    transform: scale(1.1);
-    /* Scaling effect on hover */
-}
-
-footer {
-    position: absolute;
-    text-align: center;
-    background-color: beige;
-    color: brown;
-    bottom: 0;
-    width: 100%;
-}
-
-@media (max-width: 600px) {
-    .main {
-        flex-direction: column;
-        align-items: center;
-    }
-    .about-section,
-    .skills-section,
-    .contact-section {
-        margin: 20px;
-    }
-    .about-section img,
-    .skills-section img,
-    .contact-section img {
-        width: 370px;
-        height: 200px;
-        border-radius: 20px;
-    }
-}
-
-.desktop {
-    display: flex;
+    flex-direction: column;
     align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.headings {
+    font-size: 50px;
+    text-align: center;
+    margin: 40px 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.home {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 640px;
     justify-content: center;
+    align-items: center;
+    color: rgb(218, 202, 36);
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('../images/icon.jpeg') no-repeat center center/cover;
+    height: 680px;
+    width: 100%;
+    z-index: -1;
+}
+
+@media(max-width:600px) {
+    #home::before {
+        width: 100%;
+    }
 }

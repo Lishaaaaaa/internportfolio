@@ -3,24 +3,9 @@ import Home from "./components/Home";
 import About_us from "./components/About_us";
 import Contact from "./components/Contact";
 import Skills from "./components/Skills";
-import Carousel from "./components/Carousel";
-import Footer from "./components/Footer";
-import { useLocation } from "react-router-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
-// function HideCarousel() {
-//   const location = useLocation();
-
-//   return (
-//     <div>
-//       {location.pathname !== "/Contact" && (
-//         /* The following content will be displayed if the current route is not "/contact" */
-//         <Carousel />
-//       )}
-//     </div>
-//   );
-// }
 function App() {
     return ( <
         div className = "App" >
@@ -45,7 +30,8 @@ function App() {
         Route path = "/Skills"
         element = { < Skills / > }
         />{" "} <
-        /Routes>{" "} { /* <HideCarousel /> */ } { /* <Footer /> */ }
+        /Routes>{" "}
+
 
         <
         /BrowserRouter>{" "} <
@@ -54,3 +40,13 @@ function App() {
 }
 
 export default App;
+
+
+//git pull origin main(main is branch name)
+//git push origin main or master
+
+
+//git pull origin main
+//git status
+//git add .
+//git git commit -m "message"

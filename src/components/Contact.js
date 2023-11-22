@@ -6,7 +6,6 @@ import "../css/Contact.css";
 function Contact() {
     const form = useRef();
     const [isLoading, setIsLoading] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const sendEmail = async(e) => {
         e.preventDefault();
@@ -14,67 +13,58 @@ function Contact() {
         // Show loader
         setIsLoading(true);
 
-        try {
-            await emailjs.sendForm(
+        emailjs
+            .sendForm(
                 "service_r2dfdde",
                 "template_0mj7ezl",
                 form.current,
                 "ElX9fZkifbbc2tNT4"
-            );
+            )
 
-            setIsSubmitted(true);
-
-        } catch (error) {
-            console.error(error.text);
-        } finally {
-            // Hide loader
-            setIsLoading(false);
-        }
+        .then(
+            (result) => {
+                console.log(result.text);
+                setIsLoading(false);
+                alert("Form Submitted");
+            },
+            (error) => {
+                console.log(error.text);
+            }
+        );
     };
 
     return ( <
-        div className = "success" > {
-            isSubmitted ? ( <
-                div className = "message" >
-                <
-                p > Submitted successfully < /p>
-
-                <
-                /div>
+        div className = "formele" >
+        <
+        form ref = { form }
+        onSubmit = { sendEmail } >
+        <
+        h2 className = "contacth2" > Contact Form < /h2> <label> Name: </label > { " " } <
+        input type = "text"
+        name = "name" / > < br / >
+        <
+        label > Email: < /label> <input type="email" name="email" / > < br / >
+        <
+        label > Message: < /label> <input type="message" name="message" / > < br / >
+        <
+        label > Address: < /label> <textarea name="address"> </textarea > { " " } {
+            isLoading ? ( <
+                Loader / >
             ) : ( <
-                div className = "formele" >
-                <
-                form ref = { form }
-                onSubmit = { sendEmail } >
-                <
-                label > Name: < /label> <
-                input type = "text"
-                name = "name" / > < br / >
-                <
-                label > Email: < /label> <
-                input type = "email"
-                name = "email" / > < br / >
-                <
-                label > Message: < /label> <
-                input type = "message"
-                name = "message" / > < br / >
-                <
-                label > Address: < /label> <
-                textarea name = "address" > < /textarea> <
-                input type = "submit"
-                name = "submit"
-                value = "Send" / >
-                <
-                br / >
-                <
-                input type = "reset"
-                name = "submit"
-                value = "Reset" / >
-                <
-                /form> <
-                /div>
+                button type = "submit"
+                className = "btn" > { " " }
+                Submit { " " } <
+                /button>
             )
-        } { isLoading && < Loader / > } <
+        } { " " } <
+        br / >
+        <
+        button type = "reset"
+        className = "reset"
+        value = "Reset" > { " " }
+        Reset { " " } <
+        /button>{" "} <
+        /form>{" "} <
         /div>
     );
 }

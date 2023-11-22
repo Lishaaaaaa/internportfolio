@@ -7,7 +7,7 @@ import GIcon from "../icon/Github.svg";
 
 function Footer() {
     return ( <
-        footer className = "footer" >
+        footer >
         <
         div className = "foot" >
         <
@@ -33,7 +33,8 @@ function Footer() {
         /div>{" "} <
         div className = "item" >
         <
-        a href = "#" > { " " } <
+        a href = "#" >
+        <
         img src = { LIcon }
         alt = "Linkedin Icon"
         className = "licon" / > { " " } <
@@ -41,7 +42,8 @@ function Footer() {
         /div>{" "} <
         div className = "item" >
         <
-        a href = "#" > { " " } <
+        a href = "#" >
+        <
         img src = { GIcon }
         alt = "Github Icon"
         className = "gicon" / > { " " } <

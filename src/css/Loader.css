@@ -10,6 +10,8 @@
     height: 50px;
     border-radius: 50%;
     animation: spin 4s linear infinite;
+    padding: 16x;
+    background-color: aliceblue;
 }
 
 @keyframes spin {

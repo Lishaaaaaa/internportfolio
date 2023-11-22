@@ -1,48 +1,18 @@
 .formele {
     width: 500px;
     margin: 70px auto;
-    /* Add margin to create space from the top */
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    background-color: #221f1f;
     border-radius: 8px;
     position: relative;
 }
-
-
-/* Styling for the success message */
-
-.success {
-    max-width: 700px;
-    margin: 100px auto;
-    /* Add margin to create space from the top */
-    text-align: center;
-    /* position: fixed; */
-    top: 20px;
-    /* Adjust the top position as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-
-.success .message {
-    padding: 10px;
-    background-color: #4caf50;
-    color: #fff;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-
-/* Add more styles as needed */
-
-
-/* Styling for form labels and input fields */
 
 .formele label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    color: whitesmoke;
 }
 
 .formele input,
@@ -70,15 +40,32 @@
     background-color: #45a049;
 }
 
-.Loader {
+.btn,
+.reset {
+    padding: 10px;
+    margin-bottom: 4px;
+    width: 60px;
+}
+
+.btn {
+    background-color: #4caf50;
+    border-radius: 10px;
+}
+
+.reset {
+    background-color: red;
+    border-radius: 10px;
+}
+
+.contacth2 {
+    font-size: 30px;
     text-align: center;
-    margin-top: 20px;
+    color: rgb(16, 16, 230);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 @media(max-width:600px) {
     .formele {
-        max-width: 340px auto;
-        overflow: hidden;
-        /* margin-left: 20px; */
+        max-width: 70%;
     }
 }
