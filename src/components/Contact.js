@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import Loader from "./Loader";
 import "../css/Contact.css";
 
+
 function Contact() {
     const form = useRef();
     const [isLoading, setIsLoading] = useState(false);
@@ -64,7 +65,9 @@ function Contact() {
         value = "Reset" > { " " }
         Reset { " " } <
         /button>{" "} <
-        /form>{" "} <
+        /form>{" "}
+
+        <
         /div>
     );
 }

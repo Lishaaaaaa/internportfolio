@@ -12,14 +12,8 @@ nav {
     display: none;
 }
 
-.icon {
-    display: block;
-}
-
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .mobile-nav {
@@ -67,10 +61,6 @@ nav {
         display: block;
         z-index: 2;
     }
-    /* nav {
-        background-color: #4267b2;
-        padding: 20px 10px;
-    } */
     .icon {
         display: block;
         border: 2px solid #514d4d;
@@ -82,48 +72,32 @@ nav {
     .mobile-nav ul {
         background-color: #313434;
         position: absolute;
-        top: 60px;
+        top: 80px;
         left: 0;
         margin: 0;
-        overflow: hidden;
         max-width: 100px;
-        max-height: 300px;
+        max-height: 350px;
         display: flex;
         flex-direction: column;
     }
     .mobile-nav a {
         padding: 8px;
-        /* margin: 0; */
-        /* width: 100%; */
         display: flex;
         color: white;
     }
 }
 
 .desktop-nav ul li a:hover {
-    background-color: rgb(212, 220, 220);
+    background-color: rgb(189, 189, 189);
     padding: 20px 20px;
     color: black;
 }
 
 .mobile-nav ul li a:hover {
-    background-color: rgb(228, 233, 233);
-    padding: 10px;
+    background-color: rgb(221, 222, 215);
+    padding: 9px;
     color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 300;
-    /* width: 100%; */
-    /* display: flex;
-    text-decoration: none; */
-}
-
-.mobile-nav ul li a:active {
-    background-color: rgb(136, 201, 241);
-}
-
-.navbar {
-    position: relative;
-    /* z-index: 2; */
+    font-weight: 550;
 }
 
 .clsbtn {
@@ -146,11 +120,6 @@ nav {
 
 .navbar {
     color: #cc0000;
-}
-
-.desktop-nav ul li a,
-.mobile-nav ul li a {
-    transition: background-color 0.3s, padding 0.3s, color 0.3s;
 }
 
 nav {

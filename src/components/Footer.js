@@ -8,8 +8,7 @@ import GIcon from "../icon/Github.svg";
 function Footer() {
     return ( <
         footer >
-        <
-        div className = "foot" >
+
         <
         div className = "item" >
         <
@@ -47,8 +46,9 @@ function Footer() {
         img src = { GIcon }
         alt = "Github Icon"
         className = "gicon" / > { " " } <
-        /a>{" "} <
-        /div>{" "} <
+        /a>{" "}
+
+        <
         /div>{" "} <
         /footer>
     );

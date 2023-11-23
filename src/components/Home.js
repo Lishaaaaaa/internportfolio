@@ -1,7 +1,7 @@
 import About_us from "./About_us";
 import Contact from "./Contact";
 import Skills from "./Skills";
-import Footer from "./Footer";
+
 import "../css/Home.css";
 
 function Home() {
@@ -22,8 +22,7 @@ function Home() {
         Skills / >
         <
         Contact / >
-        <
-        Footer / >
+
         <
         /div>
     );

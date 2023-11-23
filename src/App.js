@@ -3,18 +3,17 @@ import Home from "./components/Home";
 import About_us from "./components/About_us";
 import Contact from "./components/Contact";
 import Skills from "./components/Skills";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
     return ( <
         div className = "App" >
         <
         BrowserRouter >
-
         <
         Navbar / >
-
         <
         Routes >
         <
@@ -30,9 +29,8 @@ function App() {
         Route path = "/Skills"
         element = { < Skills / > }
         />{" "} <
-        /Routes>{" "}
-
-
+        /Routes>{" "} <
+        Footer / >
         <
         /BrowserRouter>{" "} <
         /div>
@@ -41,10 +39,8 @@ function App() {
 
 export default App;
 
-
 //git pull origin main(main is branch name)
 //git push origin main or master
-
 
 //git pull origin main
 //git status

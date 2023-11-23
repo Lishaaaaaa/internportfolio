@@ -38,7 +38,7 @@ function Navbar() {
             ) : ( <
                 li className = "desktop" >
                 <
-                Link to = { "/" } > Home < /Link> <
+                Link to = { "/" } > Home < /Link>{" "} <
                 /li>
             )
         } { " " } {
@@ -47,7 +47,7 @@ function Navbar() {
             ) : ( <
                 li className = "desktop" >
                 <
-                Link to = "/About_us" > About < /Link> <
+                Link to = "/About_us" > About < /Link>{" "} <
                 /li>
             )
         } { " " } {
@@ -56,16 +56,16 @@ function Navbar() {
             ) : ( <
                 li className = "desktop" >
                 <
-                Link to = "/Skills" > Skills < /Link> <
+                Link to = "/Skills" > Skills < /Link>{" "} <
                 /li>
             )
-        } { " " } {
+        } {
             activeNav === "/Contact" ? (
                 " "
             ) : ( <
                 li className = "desktop" >
                 <
-                Link to = "/Contact" > Contact < /Link> <
+                Link to = "/Contact" > Contact < /Link>{" "} <
                 /li>
             )
         } { " " } <
@@ -78,9 +78,10 @@ function Navbar() {
         img src = { svgIcon }
         onClick = {
             () => hamburger(true) }
-        alt = "Hamburger Icon" / >
+        alt = "Hamburger Icon" /
+        >
         <
-        /span>{" "} {
+        /span> {
             mobileNavbar ? ( <
                 div className = "mobile-nav" >
                 <

@@ -67,5 +67,6 @@
 @media(max-width:600px) {
     .formele {
         max-width: 70%;
+        height: 70vh;
     }
 }

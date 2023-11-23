@@ -24,15 +24,22 @@
     background-color: #e0e0e0;
 }
 
+@media(min-width:601px) {
+    .parent {
+        height: 88vh;
+    }
+}
+
 @media(max-width:600px) {
     .skillimg {
         display: flex;
         flex-direction: column;
         padding: 20px;
         align-items: center;
+        margin-top: 10px;
     }
     .card img {
-        width: 150px;
+        width: 170px;
         height: 160px;
         margin-bottom: 10px;
         border-radius: 50%;
