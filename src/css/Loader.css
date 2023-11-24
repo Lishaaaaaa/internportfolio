@@ -1,9 +1,9 @@
-.loader-container {
+/* .loader-container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-}
+} */
 
 .loader {
     width: 50px;
@@ -11,7 +11,7 @@
     border-radius: 50%;
     animation: spin 4s linear infinite;
     padding: 16x;
-    background-color: aliceblue;
+    background-color: rgb(198, 205, 211);
 }
 
 @keyframes spin {

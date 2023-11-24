@@ -42,13 +42,14 @@ function Contact() {
         <
         h2 className = "contacth2" > Contact Form < /h2> <label> Name: </label > { " " } <
         input type = "text"
-        name = "name" / > < br / >
+        name = "name"
+        required / > < br / >
         <
-        label > Email: < /label> <input type="email" name="email" / > < br / >
+        label > Email: < /label> <input type="email" name="email" required / > < br / >
         <
-        label > Message: < /label> <input type="message" name="message" / > < br / >
+        label > Message: < /label> <input type="message" name="message" required/ > < br / >
         <
-        label > Address: < /label> <textarea name="address"> </textarea > { " " } {
+        label > Address: < /label> <textarea name="address" required> </textarea > { " " } {
             isLoading ? ( <
                 Loader / >
             ) : ( <
