@@ -1,15 +1,11 @@
-function Card({ skill }) {
-    return ( <
-        div className = "card" > { /* <h1> {skill.h} </h1>  */ } {
-            /* <div className="pcontent">
-                  <p> {skill.p} </p>
-                  </div> */
-        }
-
-        <
-        img src = { skill.logo }
-        />{" "} <
-        /div>
-    );
+function Card({ skill, position }) {
+  return (
+    <div className={`card ${position}`}>
+      <div className="card-content">
+        <img src={skill.logo} alt={`${skill.name} logo`} />
+        <p className="skill-name">{skill.name}</p>
+      </div>
+    </div>
+  );
 }
 export default Card;

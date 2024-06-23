@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import svgIcon from "../icon/Icons.svg";
 import "../css/Navbar.css";
+import logo from "../images/logo.png";
 import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
@@ -30,6 +31,12 @@ function Navbar() {
         <
         div className = "navbar" >
         <
+        div className = "logoimg" >
+        <
+        img src = { logo }
+        alt = "My Profile Picture" / >
+        <
+        /div>{" "} <
         div className = "desktop-nav" >
         <
         ul > { " " } {
@@ -59,7 +66,16 @@ function Navbar() {
                 Link to = "/Skills" > Skills < /Link>{" "} <
                 /li>
             )
-        } {
+        } { " " } {
+            activeNav === "/Projects" ? (
+                " "
+            ) : ( <
+                li className = "desktop" >
+                <
+                Link to = "/Projects" > Projects < /Link>{" "} <
+                /li>
+            )
+        } { " " } {
             activeNav === "/Contact" ? (
                 " "
             ) : ( <
@@ -81,7 +97,7 @@ function Navbar() {
         alt = "Hamburger Icon" /
         >
         <
-        /span> {
+        /span>{" "} {
             mobileNavbar ? ( <
                 div className = "mobile-nav" >
                 <
@@ -117,6 +133,15 @@ function Navbar() {
                         /li>
                     )
                 } { " " } {
+                    activeNav === "/Projects" ? (
+                        " "
+                    ) : ( <
+                        li >
+                        <
+                        Link to = { "/Projects" } > Projects < /Link>{" "} <
+                        /li>
+                    )
+                } { " " } {
                     activeNav === "/Contact" ? (
                         " "
                     ) : ( <
@@ -126,13 +151,13 @@ function Navbar() {
                         /li>
                     )
                 } { " " } <
-                /ul>{" "} <
+                /ul> <
                 /div>
             ) : (
                 ""
             )
-        } { " " } <
-        /div>{" "} <
+        } <
+        /div> <
         /nav>
     );
 }

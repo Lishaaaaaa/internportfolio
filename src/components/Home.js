@@ -1,6 +1,7 @@
 import About_us from "./About_us";
 import Contact from "./Contact";
 import Skills from "./Skills";
+import Projects from "./Projects";
 
 import "../css/Home.css";
 
@@ -21,8 +22,9 @@ function Home() {
         <
         Skills / >
         <
+        Projects / >
+        <
         Contact / >
-
         <
         /div>
     );

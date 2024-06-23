@@ -58,7 +58,7 @@ function About_us() {
         img src = { myProfile }
         alt = "My Profile Picture" / >
         <
-        /div> <
+        /div>{" "} <
         /div>{" "} <
         /div>
     );

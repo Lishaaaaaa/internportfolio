@@ -1,48 +1,108 @@
-.skillimg {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-top: 80px;
-}
-
-.h2skills {
-    color: rgb(197, 177, 177);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 40px;
+.skills-container {
+    padding: 40px;
+    background-color: rgb(105, 40, 105);
     text-align: center;
 }
 
+.skills-heading {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: rgb(197, 177, 177);
+    margin-bottom: 40px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    position: relative;
+    background: #1f1e1e;
+    border-radius: 10px;
+    width: 35%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 .card img {
-    width: 250px;
-    height: 260px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 10px;
     border-radius: 50%;
-    margin: 20px;
+    background-color: #fdfbfb;
+}
+
+.skill-name {
+    font-size: 20px;
+    color: #f0eeee;
+    margin-top: 10px;
+}
+
+.card.left,
+.card.right {
+    left: 0;
+    box-shadow: 0 4px 8px rgba(244, 243, 243, 0.7);
+}
+
+.card.left {
+    height: 220px;
+}
+
+.card.left img,
+.card.right img {
+    align-self: center;
+    /* Center the image horizontally */
+    box-shadow: 0 4px 8px rgba(244, 243, 243, 0.7);
+}
+
+.card.right {
+    left: 55%;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(212, 212, 51);
+    top: 15px;
+    left: -12.5px;
+}
+
+.card.right::after {
+    left: auto;
+    right: -12.5px;
 }
 
 .card:hover {
-    background-color: #e0e0e0;
+    transform: scale(0.9);
 }
 
-@media(min-width:601px) {
-    .parent {
-        height: 88vh;
+@media (max-width: 600px) {
+    .card {
+        width: 60%;
+        margin: 0 auto;
+        left: 0 !important;
+        margin-top: 20px;
     }
-}
-
-@media(max-width:600px) {
-    .skillimg {
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-        align-items: center;
-        margin-top: 10px;
+    .card::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
-    .card img {
-        width: 170px;
-        height: 160px;
-        margin-bottom: 10px;
-        border-radius: 50%;
-        margin: 20px;
+    .card::after {
+        display: none;
     }
 }

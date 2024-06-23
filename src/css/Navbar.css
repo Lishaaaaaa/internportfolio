@@ -5,7 +5,18 @@ body {
 
 nav {
     background-color: rgb(105, 40, 105);
-    padding: 20px 20px;
+    font-weight: bold;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoimg img {
+    width: 70px;
+    height: auto;
+    border-radius: 50%;
+    display: flex;
 }
 
 .mobile-nav .clsbtn {
@@ -14,6 +25,10 @@ nav {
 
 .navbar {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Added to space items out */
+    width: 100%;
 }
 
 .mobile-nav {
@@ -28,6 +43,11 @@ nav {
     display: flex;
 }
 
+.desktop-nav {
+    margin-left: auto;
+    /* Ensures desktop nav is pushed to the right */
+}
+
 .desktop-nav li,
 .mobile-nav li {
     margin: 0 10px;
@@ -37,20 +57,16 @@ nav {
 .mobile-nav a {
     color: #fffcfc;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .icon {
     cursor: pointer;
     font-size: 24px;
     color: #f37b7b;
-    display: none;
+    /* display: none; */
     background-color: #fffcfc;
     padding: 2px;
-}
-
-.mobile-nav {
-    display: none;
 }
 
 @media (max-width: 600px) {
@@ -63,6 +79,8 @@ nav {
     }
     .icon {
         display: block;
+        margin-left: auto;
+        /* Push the icon to the right */
         border: 2px solid #514d4d;
         border-radius: 5px;
     }
@@ -72,11 +90,9 @@ nav {
     .mobile-nav ul {
         background-color: #313434;
         position: absolute;
-        top: 80px;
-        left: 0;
+        top: 90px;
+        right: 0;
         margin: 0;
-        max-width: 100px;
-        max-height: 350px;
         display: flex;
         flex-direction: column;
     }
@@ -88,23 +104,19 @@ nav {
 }
 
 .desktop-nav ul li a:hover {
-    background-color: rgb(189, 189, 189);
-    padding: 20px 20px;
     color: black;
 }
 
 .mobile-nav ul li a:hover {
-    background-color: rgb(221, 222, 215);
-    padding: 9px;
-    color: black;
+    color: rgb(68, 145, 178);
     font-weight: 550;
 }
 
 .clsbtn {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
-    width: 30px;
-    background-color: beige;
+    width: 32px;
+    background-color: rgb(255, 255, 255);
     padding: 6px;
     border: 2px solid #514d4d;
     border-radius: 5px;

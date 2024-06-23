@@ -4,6 +4,7 @@ import About_us from "./components/About_us";
 import Contact from "./components/Contact";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
+import Projects from "./components/Projects";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -23,11 +24,14 @@ function App() {
         Route path = "/About_us"
         element = { < About_us / > }
         />{" "} <
-        Route path = "/Contact"
-        element = { < Contact / > }
+        Route path = "/Projects"
+        element = { < Projects / > }
         />{" "} <
         Route path = "/Skills"
         element = { < Skills / > }
+        />{" "} <
+        Route path = "/Contact"
+        element = { < Contact / > }
         />{" "} <
         /Routes>{" "} <
         Footer / >
